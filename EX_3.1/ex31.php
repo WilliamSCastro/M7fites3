@@ -19,7 +19,7 @@
     <?php
 
         $file = fopen("contactes31.txt", "r");
-        
+        $newFile = fopen("contactes31b.txt","w");
 
         while(!feof($file)) {
 
@@ -38,12 +38,12 @@
                 echo "<td style='border: 1px solid black; border-collapse: collapse; padding: 15px;'>$telephone</td>";
             echo "</tr>";
 
-            $newFile = fopen("contactes31b.txt","a");
+           
             fwrite($newFile,"$name# $surname1# $surname2# $telephone");
-            fclose($newFile);
+           
 
         }
-
+        fclose($newFile);
         fclose($file);
 
     ?>
